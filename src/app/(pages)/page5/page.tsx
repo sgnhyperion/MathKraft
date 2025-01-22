@@ -12,7 +12,7 @@ const page = () => {
   };
   return (
     <div>
-    <HeaderLayout mixedFraction={mixedFraction} emoji="🤩" path={"page4"}/>
+    <HeaderLayout mixedFraction={mixedFraction} emoji="🤩"/>
 
     <div className="flex justify-center items-center mt-6"
     >

@@ -2,8 +2,6 @@ import React from "react";
 import MixedFraction from "../game/components/MixedFraction";
 import Fraction from "../game/components/Fraction";
 import Button from "../game/components/Button";
-import { useRouter } from "next/navigation";
-import { DevHelper } from "../game/utils/helper";
 
 interface Header {
   mixedFraction?: {
@@ -18,21 +16,13 @@ interface Header {
 export default function HeaderLayout({
   mixedFraction = { whole: 3, numerator: 2, denominator: 4 } ,
   emoji,
-  path
 }) {
 
-  const router = useRouter();
   return (
     <div className="bg-[#fff6f6]">
+      <div>
+      </div>
       <header className="p-4">
-      <div
-          className="flex justify-center items-center mt-2 mb-6"
-          onClick={() => {
-            router.push("/");
-          }}
-        >
-          <Button text="Prev" />
-        </div>
         <div className="mb-8 flex justify-center items-center">
           <div className="flex justify-center items-center border-2 border-[#f54f7b] rounded-lg bg-[#f54f7b]">
             <div className="border-spacing-0 border-[#f54f7b] rounded-lg bg-[#f54f7b] h-28 w-20 flex justify-center items-center">

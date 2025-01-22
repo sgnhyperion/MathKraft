@@ -75,7 +75,7 @@ export const nextStep = (
   setGameStateRef: (newState: (prevState: GameState) => GameState) => void
 ) => {
   if (screen === 'first') {
-    setGameStateRef(prev => ({ ...prev, state1: { ...prev.state1, step: prev.state1.step + 1 } }));
+    setGameStateRef(prev => ({ ...prev, state1: { ...prev.state1, step: prev.state1.step>=5 ? 1: prev.state1.step + 1 } }));
   } else if (screen === 'second') {
     setGameStateRef(prev => ({ ...prev, state2: { ...prev.state2, step: prev.state2.step + 1 } }));
   } else if (screen === 'third') {
@@ -83,7 +83,7 @@ export const nextStep = (
   }
 }
 
-export const goToStep = (
+ export const goToStep = (
   screen: GameScreen, 
   setGameStateRef: (newState: (prevState: GameState) => GameState) => void,
   step: number

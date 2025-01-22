@@ -13,13 +13,13 @@ const page = () => {
   const router = useRouter();
   return (
     <div>
-      <HeaderLayout mixedFraction={mixedFraction} emoji="🤔" path={"/"}/>
+      <HeaderLayout mixedFraction={mixedFraction} emoji="🤔"/>
 
       <div
         className="flex justify-center items-center mt-6"
-        onClick={() => {
-          router.push("/page3");
-        }}
+        // onClick={() => {
+        //   router.push("/page3");
+        // }}
       >
         <Button text="Step 2" symbol=">>" />
       </div>

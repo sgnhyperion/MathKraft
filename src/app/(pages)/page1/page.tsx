@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import Button from "../game/components/Button";
-import MixedFraction from "../game/components/MixedFraction";
+import Button from "../../game/components/Button";
+import MixedFraction from "../../game/components/MixedFraction";
 import Fraction from "@/app/game/components/Fraction";
 export default function Page1() {
   const router = useRouter();
@@ -23,9 +23,9 @@ export default function Page1() {
 
             <div className="w-[70%] h-full border-4 border-[#f54f7b] flex items-center justify-center">
               <div className="flex items-center justify-around space-x-2 w-[80%] h-full ">
-                <MixedFraction size={"text-6xl"}/>
+                <MixedFraction size={"text-6xl"} />
                 <div className="text-6xl font-bold">=</div>
-                <Fraction size={"text-6xl"}num={"?"} denom={"?"} />
+                <Fraction size={"text-6xl"} num={"?"} denom={"?"} />
               </div>
             </div>
           </div>
@@ -33,9 +33,9 @@ export default function Page1() {
 
         <div
           className="flex justify-center items-center mt-6"
-          onClick={() => {
-            router.push("/page2");
-          }}
+          // onClick={() => {
+          //   router.push("/page2");
+          // }}
         >
           <Button text="START" symbol=">>" />
         </div>

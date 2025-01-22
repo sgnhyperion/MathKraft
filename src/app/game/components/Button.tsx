@@ -1,11 +1,18 @@
 import React from "react";
 import { useSoundEffects } from "../utils/sound";
+import { useGameState } from '../state-utils';
+import { nextStep } from '../utils/helper';
+// import { step } from "../game-state";
 const Button = ({ text, symbol=null }) => {
 
+  const { gameStateRef, setGameStateRef } = useGameState();
+  const { step } = gameStateRef.current.state1;
+
   const handleClick = () => {
-    console.log('Button clicked');
     const soundEffects = useSoundEffects();
     soundEffects.join.play();
+    nextStep('first', setGameStateRef);
+    console.log(step);
   }
   if(!symbol){
     return (

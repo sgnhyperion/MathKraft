@@ -34,7 +34,7 @@ export interface GameState {
 export const initialGameState: GameState = {
   screen: 'first',
   state1: {
-    step: 0,
+    step: 1,
     mixedFraction: {
       whole: 3,
       numerator: 2,

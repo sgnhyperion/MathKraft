@@ -15,10 +15,10 @@ const page = () => {
 
   return (
     <div>
-      <HeaderLayout mixedFraction={mixedFraction} emoji="😃" path={"/page3"}/>
+      <HeaderLayout mixedFraction={mixedFraction} emoji="😃"/>
 
       <div className="flex justify-center items-center mt-6"
-        onClick={() => {router.push('/page5');}}
+        // onClick={() => {router.push('/page5');}}
       >
       <Button text='Step 3' symbol='>>'/>
       </div>
