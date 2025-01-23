@@ -17,6 +17,7 @@ const page = () => {
     <div className="h-screen flex flex-col items-center justify-between">
       <div className="w-1/2 rounded-2xl shadow-lg flex justify-center h-full">
         <HeaderLayout
+          text="ADD THE FRACTION"
           emoji={"🤔"}
           whole={initialGameState.state1.mixedFraction.whole}
           num={initialGameState.state1.mixedFraction.numerator}

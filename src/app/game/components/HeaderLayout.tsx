@@ -4,7 +4,7 @@ import Fraction from "./Fraction";
 import StepHeader from "./StepHeader";
 import { Freckle_Face } from "next/font/google";
 
-const Header = ({ emoji, whole, num, denom }) => {
+const Header = ({text, emoji, whole, num, denom }) => {
   return (
     <div className=" w-full flex flex-col justify-around items-center h-[30%] bg-[#fff6f6] pb-6">
 
@@ -23,13 +23,13 @@ const Header = ({ emoji, whole, num, denom }) => {
             <div className="text-4xl">=</div>
             <Fraction color="black" size="text-4xl" num={"?"} denom={"?"} />
           </div>
-          <div className="text-7xl border-l-4 border-[#ff497c] h-full rounded-l-lg flex justify-center items-center w-1/3">{emoji}</div>
+          <div className="text-[3.5vw] border-l-4 border-[#ff497c] h-full rounded-l-lg flex justify-center items-center w-1/3">{emoji}</div>
         </div>
 
       </div>
 
       {/* step */}
-      <StepHeader />
+      <StepHeader text={text}/>
     </div>
   );
 };
