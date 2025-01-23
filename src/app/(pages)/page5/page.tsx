@@ -1,8 +1,7 @@
-"use client"
-import React from 'react'
-import Button from '@/app/game/components/Button'
-import HeaderLayout from '../header';
-
+"use client";
+import React from "react";
+import Button from "@/app/game/components/Button";
+import HeaderLayout from "../../game/components/HeaderLayout";
 
 const page = () => {
   const mixedFraction = {
@@ -12,14 +11,13 @@ const page = () => {
   };
   return (
     <div>
-    <HeaderLayout mixedFraction={mixedFraction} emoji="🤩"/>
+      {/* <HeaderLayout mixedFraction={mixedFraction} emoji="🤩"/> */}
 
-    <div className="flex justify-center items-center mt-6"
-    >
-    <Button text='Done' symbol='&gt;&gt;'/>
+      <div className="flex justify-center items-center mt-6">
+        <Button text="Done" />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

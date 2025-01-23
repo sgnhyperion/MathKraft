@@ -1,9 +1,8 @@
-"use client"
-import React from 'react'
-import Button from '@/app/game/components/Button'
+"use client";
+import React from "react";
+import Button from "@/app/game/components/Button";
 import { useRouter } from "next/navigation";
-import HeaderLayout from '../header';
-
+import HeaderLayout from "../../game/components/HeaderLayout";
 
 const page = () => {
   const router = useRouter();
@@ -13,17 +12,17 @@ const page = () => {
     denominator: 4,
   };
   return (
-
     <div>
-      <HeaderLayout mixedFraction={mixedFraction} emoji="😃"/>
+      {/* <HeaderLayout mixedFraction={mixedFraction} emoji="😃"/> */}
 
-      <div className="flex justify-center items-center mt-6"
+      <div
+        className="flex justify-center items-center mt-6"
         // onClick={() => {router.push('/page4');}}
-        >
-        <Button text='Slice'/>
+      >
+        <Button text="Slice" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

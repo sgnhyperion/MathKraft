@@ -1,28 +1,21 @@
-"use client";
 import React from "react";
+import Header from "../../game/components/HeaderLayout";
+import { initialGameState } from "@/app/game/game-state";
 import Button from "@/app/game/components/Button";
-import { useRouter } from "next/navigation";
-import HeaderLayout from "../header";
 
 const page = () => {
-  const mixedFraction = {
-    whole: 3,
-    numerator: 2,
-    denominator: 4,
-  };
-  const router = useRouter();
   return (
-    <div>
-      <HeaderLayout mixedFraction={mixedFraction} emoji="🤔"/>
-
-      <div
-        className="flex justify-center items-center mt-6"
-        // onClick={() => {
-        //   router.push("/page3");
-        // }}
-      >
-        <Button text="Step 2" symbol=">>" />
+    <div className="h-screen flex flex-col items-center justify-between">
+      <div className="w-1/2 rounded-2xl shadow-lg flex justify-center h-full">
+        <Header
+          emoji={"🤔"}
+          whole={initialGameState.state1.mixedFraction.whole}
+          num={initialGameState.state1.mixedFraction.numerator}
+          denom={initialGameState.state1.mixedFraction.denominator}
+        />
       </div>
+
+      <Button text={"Step 2"} />
     </div>
   );
 };

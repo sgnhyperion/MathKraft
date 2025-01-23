@@ -21,7 +21,7 @@ const Button = ({ text, symbol=null }) => {
       >
               <div className="bg-[#f54f7b]  border-[#f54f7b] px-8 py-2 transform transition-transform duration-100 group-active:translate-x-1 group-active:translate-y-1">
               <div className="flex items-center space-x-2">
-                  <span className="text-2xl font-normal text-white">{text}</span>
+                  <span className="text-4xl font-normal text-white">{text}</span>
               </div>
               </div>
           
