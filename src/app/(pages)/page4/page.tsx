@@ -55,7 +55,7 @@ const page = () => {
           <div className="flex items-center justify-evenly w-[60%]">
             <div className="text-[1.5vw]">So there are</div>
             <Input />
-            <Fraction color="black" size="text-[1.5vw]" num="1" denom={4} />
+            <Fraction color="black" size="text-[1.5vw]" num="1" denom={slice || 4} />
             <div className="text-[1.5vw]">sized pieces in 3 wholes</div>
           </div>
 
@@ -70,7 +70,7 @@ const page = () => {
                 <div className="flex flex-col items-center justify-evenly h-full">
                   <Input />
                   <div className="w-[3vw] bg-black h-[0.2rem]"></div>
-                  <div className=" text-[2vw] w-full flex justify-center">4</div>
+                  <div className=" text-[2vw] w-full flex justify-center">{slice || 4}</div>
                 </div>
               </div>
             </CardContent>

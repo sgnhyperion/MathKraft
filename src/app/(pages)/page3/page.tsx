@@ -24,7 +24,7 @@ const Page = () => {
     <div className="h-screen flex justify-center">
       <div className="w-1/2 rounded-2xl shadow-lg h-full flex flex-col items-center">
         <HeaderLayout
-          text = "Step 2"
+          text = "Wholes to Fractions"
           emoji = "😀"
           whole={initialGameState.state1.mixedFraction.whole}
           num={initialGameState.state1.mixedFraction.numerator}
