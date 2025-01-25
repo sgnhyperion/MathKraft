@@ -1,3 +1,4 @@
+"use client";
 import React, {useState} from "react";
 import Header from "../../game/components/HeaderLayout";
 import { initialGameState } from "@/app/game/game-state";
