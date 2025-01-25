@@ -53,6 +53,7 @@ export const DevHelper = () => {
         <Input 
           type="number" 
           value={directStep} 
+          category="header"
           onChange={(e) => setDirectStep(e.target.value)}
           className="w-16 mr-2"
           onKeyDown={(e) => {
