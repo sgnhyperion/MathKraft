@@ -1,15 +1,14 @@
 "use client"
 
 interface CircleProps {
-  numerator: number;  // Number of filled slices
-  denominator: number; // Total number of slices
-  color?: string; // Color of filled slices
-  circleColor?: string; // Color of the circle
+  numerator: number;  
+  denominator: number; 
+  color?: string; 
+  circleColor?: string;
 }
 
 const Circle = ({ numerator, denominator, color = '#99d502', circleColor = '#d3ea00' }: CircleProps) => {
 
-  // Generate divider lines based on number of slices
   const generateSlices = () => {
     const slices = [];
     const angleStep = 360 / denominator;
@@ -28,8 +27,8 @@ const Circle = ({ numerator, denominator, color = '#99d502', circleColor = '#d3e
         <path
           key={i}
           d={`M 50 50 L ${x1} ${y1} A 45 45 0 ${largeArcFlag} 1 ${x2} ${y2} Z`}
-          fill={i < numerator ? color : 'none'} // Fill slices based on numerator
-          stroke="#FFFFFF" // Set the stroke color (gap) to white
+          fill={i < numerator ? color : 'none'} 
+          stroke="#FFFFFF" 
         />
       );
     }

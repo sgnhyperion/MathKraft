@@ -10,14 +10,13 @@ import { useSliceStore } from "@/store/useSliceStore";
 const Page = () => {
   const { slice, setSlice } = useSliceStore();
 
-  // State to track the selected slicer
   const [selectedSlice, setSelectedSlice] = useState<number | null>(null);
 
   const handleClick = async ({ slices }: { slices: number }) => {
     await setSlice(slices);
 
     const x = await slice;
-    setSelectedSlice(slices); // Update the selected slice
+    setSelectedSlice(slices); 
   };
 
   return (

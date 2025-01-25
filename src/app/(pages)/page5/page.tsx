@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Button from "@/app/game/components/Button";
+import React, { useState } from "react";
 import HeaderLayout from "../../game/components/HeaderLayout";
 import { initialGameState } from "@/app/game/game-state";
 import Circle from "@/app/game/components/Circle";
@@ -24,7 +23,6 @@ const page = () => {
   const [showAnimation, setShowAnimation] = useState(false);
 
   const { gameStateRef, setGameStateRef } = useGameState();
-  const { step } = gameStateRef.current.state1;
 
   const handleChange = async (e) => {
     const { name, value } = e.target;

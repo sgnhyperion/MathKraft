@@ -7,11 +7,10 @@ import Circle from "@/app/game/components/Circle";
 import { useSliceStore } from "@/store/useSliceStore";
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input";
-import { Select } from "@/components/ui/select";
 import Fraction from "@/app/game/components/Fraction";
 
 const page = () => {
-  const { slice, setSlice } = useSliceStore();
+  const { slice } = useSliceStore();
 
   return (
     <div className="h-screen flex flex-col items-center justify-between">

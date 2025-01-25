@@ -10,17 +10,17 @@ interface ParticleProps {
 }
 
 const colors = [
-  "#FFD700", // Gold
-  "#FF69B4", // Hot Pink
-  "#4169E1", // Royal Blue
-  "#32CD32", // Lime Green
-  "#FF4500", // Orange Red
-  "#9370DB", // Medium Purple
-  "#00CED1", // Dark Turquoise
+  "#FFD700",
+  "#FF69B4",
+  "#4169E1", 
+  "#32CD32", 
+  "#FF4500", 
+  "#9370DB", 
+  "#00CED1", 
 ]
 
 function Particle({ color, angle, originX }: ParticleProps) {
-  const distance = Math.random() * 300 + 200 // Random distance between 200-500px
+  const distance = Math.random() * 300 + 200 
   const yDistance = Math.sin(angle) * distance
   const xDistance = Math.cos(angle) * distance
 
@@ -37,11 +37,11 @@ function Particle({ color, angle, originX }: ParticleProps) {
         x: xDistance,
         y: -yDistance,
         scale: [0, 1, 1, 0.5, 0],
-        rotate: Math.random() * 360 * 2, // Spin 2-4 times
+        rotate: Math.random() * 360 * 2, 
       }}
       transition={{
         duration: 1.5,
-        ease: [0.23, 0.86, 0.73, 0.93], // Custom easing
+        ease: [0.23, 0.86, 0.73, 0.93],
         scale: {
           duration: 1.5,
           times: [0, 0.2, 0.5, 0.8, 1],
@@ -59,8 +59,7 @@ export default function PartyPopper({ onComplete }: PartyPopperProps) {
   const [particles, setParticles] = useState<React.ReactNode[]>([])
 
   useEffect(() => {
-    // Create particles
-    const particleCount = 60 // 30 particles per popper
+    const particleCount = 60 
     const newParticles: React.ReactNode[] = []
 
     // Left popper

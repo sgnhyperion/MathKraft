@@ -3,8 +3,6 @@ import React, {useState} from "react";
 import Header from "../../game/components/HeaderLayout";
 import { initialGameState } from "@/app/game/game-state";
 import Button from "@/app/game/components/Button";
-import { useSoundEffects } from "@/app/game/utils/sound";
-import { useGameState } from "@/app/game/state-utils";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import MixedFraction from "@/app/game/components/MixedFraction";
 import Fraction from "@/app/game/components/Fraction";
@@ -23,32 +21,11 @@ const page = () => {
 
   const { mixedFraction } = initialGameState.state1;
 
+
   
-  const Page2 = ({mixedFraction}) => {
-  
-    const handleClick = ()=>{
-      updateStep()
-      const soundEffect = useSoundEffects()
-      soundEffect.join.play()
-    }
-  }
-  
-    const [dropZone, setDropZone] = useState<DropZone>({});
-    const { setGameStateRef } = useGameState();
-    
-      const updateStep = () => {
-        setGameStateRef((prevState) => ({
-          ...prevState,
-          state1: {
-            ...prevState.state1,
-            step: 2, // Set the step to 1
-          },
-        }));
-      };
-   
+    const [dropZone, setDropZone] = useState<DropZone>({});    
   
     const handleDragStart = (e: React.DragEvent, type: 'whole' | 'fraction') => {
-      // Set the drag data with the type and values
       const dragData = {
         type,
         whole: type === 'whole' ? mixedFraction.whole : undefined,
@@ -63,7 +40,6 @@ const page = () => {
       try {
         const data = JSON.parse(e.dataTransfer.getData('application/json'));
         
-        // Only allow dropping whole numbers in the whole zone and fractions in the fraction zone
         if (zone === 'whole' && data.type === 'whole') {
           setDropZone(prev => ({ ...prev, whole: data.whole }));
         } else if (zone === 'fraction' && data.type === 'fraction') {
@@ -103,7 +79,7 @@ const page = () => {
         {/* left */}
         <div className="w-[40%] bg-[#ffe8e8] h-full flex flex-col justify-around items-center">
             <div className="flex gap-2 h-[80%] w-full items-center justify-center">
-              {/* Whole number draggable */}
+              {/* Whole */}
               <div
                 className="cursor-move h-[22%] flex items-center justify-center w-1/6 "
                 draggable
@@ -112,7 +88,7 @@ const page = () => {
                 <div className="text-6xl bg-white  text-green-600 border border-black w-[90%] h-full flex justify-center shadow-[-3px_3px_0px_black]">3</div>
               </div>
               
-              {/* Fraction draggable */}
+              {/* Fraction  */}
               <div
                 className="cursor-move h-1/2 flex items-center justify-center w-1/6"
                 draggable

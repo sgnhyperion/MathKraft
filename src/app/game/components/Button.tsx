@@ -2,7 +2,6 @@ import React from "react";
 import { useSoundEffects } from "../utils/sound";
 import { useGameState } from '../state-utils';
 import { nextStep } from '../utils/helper';
-// import { step } from "../game-state";
 const Button = ({ text, symbol=null }) => {
 
   const { gameStateRef, setGameStateRef } = useGameState();
