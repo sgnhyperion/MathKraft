@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Fraction = ({color, size, num, denom=null}) => {
   return (
     <div className=" flex flex-col items-center h-full justify-center">

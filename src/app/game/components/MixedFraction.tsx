@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 const MixedFraction = ({color, whole, num, denom, size}) => {
   return (
     <div className="flex items-center space-x-2 ">

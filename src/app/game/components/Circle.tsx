@@ -1,5 +1,3 @@
-"use client"
-
 interface CircleProps {
   numerator: number;  
   denominator: number; 

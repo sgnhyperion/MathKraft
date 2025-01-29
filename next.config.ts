@@ -21,14 +21,9 @@ const nextConfig: NextConfig = {
       ],
     },
   ],
-  // Ignore TypeScript errors during dev
   typescript: {
-    ignoreBuildErrors: true,       // for production builds
-    // There's also an 'ignoreDevErrors' coming in Next 13.5+; 
-    // check the docs for availability.
+    ignoreBuildErrors: true,
   },
-
-  // Ignore ESLint errors during dev
   eslint: {
     ignoreDuringBuilds: true,
   },

@@ -4,8 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:all": "concurrently \"npm run dev\" \"npm run dev:curl\"",
-    "dev:curl": "wait-on -t 60000 http://localhost:3000 && curl -s http://localhost:3000 > /dev/null && sleep 1000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

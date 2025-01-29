@@ -1,5 +1,3 @@
-import React from 'react'
-
 const StepHeader = ({text}) => {
   return (
     <div className='flex justify-center gap-2 items-center w-[100%] h-1/4'>

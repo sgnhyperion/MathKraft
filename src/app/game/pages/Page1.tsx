@@ -1,9 +1,8 @@
-"use client"
-import React from "react"
-import Button from "../../game/components/Button"
-import MixedFraction from "../../game/components/MixedFraction"
-import Fraction from "@/app/game/components/Fraction"
-import { initialGameState } from "@/app/game/game-state"
+import React from "react";
+import Button from "../components/Button";
+import MixedFraction from "../components/MixedFraction";
+import Fraction from "@/app/game/components/Fraction";
+import { initialGameState } from "@/app/game/game-state";
 
 export default function Page1() {
   return (
@@ -30,8 +29,15 @@ export default function Page1() {
                   denom={initialGameState.state1.mixedFraction.denominator}
                   size={"text-2xl sm:text-3xl md:text-4xl lg:text-5xl"}
                 />
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">=</div>
-                <Fraction color="black" size={"text-2xl sm:text-3xl md:text-4xl lg:text-5xl"} num={"?"} denom={"?"} />
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+                  =
+                </div>
+                <Fraction
+                  color="black"
+                  size={"text-2xl sm:text-3xl md:text-4xl lg:text-5xl"}
+                  num={"?"}
+                  denom={"?"}
+                />
               </div>
             </div>
           </div>
@@ -42,6 +48,5 @@ export default function Page1() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Button from "@/app/game/components/Button";
-import HeaderLayout from "../../game/components/HeaderLayout";
+import HeaderLayout from "../components/HeaderLayout";
 import { initialGameState } from "@/app/game/game-state";
 import Circle from "@/app/game/components/Circle";
 import Image from "next/image";
@@ -16,15 +16,15 @@ const Page = () => {
     await setSlice(slices);
 
     const x = await slice;
-    setSelectedSlice(slices); 
+    setSelectedSlice(slices);
   };
 
   return (
     <div className="h-screen flex justify-center">
       <div className="w-1/2 rounded-2xl shadow-lg h-full flex flex-col items-center">
         <HeaderLayout
-          text = "Wholes to Fractions"
-          emoji = "😀"
+          text="Wholes to Fractions"
+          emoji="😀"
           whole={initialGameState.state1.mixedFraction.whole}
           num={initialGameState.state1.mixedFraction.numerator}
           denom={initialGameState.state1.mixedFraction.denominator}
@@ -33,25 +33,25 @@ const Page = () => {
 
         {/* Middle Section */}
         <div className="flex justify-center items-center space-x-6 h-[25%] border-t-2 border-b-2 border-[#c0bdbd] w-full">
-        <Circle 
-          numerator={0} 
-          denominator={0} 
-          color="#ff6347"   // Color of the filled slices (e.g., tomato red)
-          circleColor="#d3ea00"   // Background color of the circle (e.g., light beige)
-        />
+          <Circle
+            numerator={0}
+            denominator={0}
+            color="#ff6347" // Color of the filled slices (e.g., tomato red)
+            circleColor="#d3ea00" // Background color of the circle (e.g., light beige)
+          />
 
-        <Circle 
-          numerator={0} 
-          denominator={0} 
-          color="#ff6347"   // Color of the filled slices (e.g., tomato red)
-          circleColor="#d3ea00"   // Background color of the circle (e.g., light beige)
-        />
-           <Circle 
-          numerator={0} 
-          denominator={0} 
-          color="#ff6347"   // Color of the filled slices (e.g., tomato red)
-          circleColor="#d3ea00"   // Background color of the circle (e.g., light beige)
-        />
+          <Circle
+            numerator={0}
+            denominator={0}
+            color="#ff6347" // Color of the filled slices (e.g., tomato red)
+            circleColor="#d3ea00" // Background color of the circle (e.g., light beige)
+          />
+          <Circle
+            numerator={0}
+            denominator={0}
+            color="#ff6347" // Color of the filled slices (e.g., tomato red)
+            circleColor="#d3ea00" // Background color of the circle (e.g., light beige)
+          />
         </div>
 
         {/* Bottom Section */}

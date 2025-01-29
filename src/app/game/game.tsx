@@ -6,17 +6,16 @@ import { useGameState } from './state-utils';
 import { DevHelper } from './utils/helper';
 import ThirdScreen from './screen/third';
 
-
 interface GameProps {
   sendAdminMessage: (role: string, content: string) => void;
 }
 
-export default function Game({sendAdminMessage}: GameProps) {
+export default function Game({ sendAdminMessage }: GameProps) {
   const { gameStateRef } = useGameState();
   const { screen } = gameStateRef.current;
   const { step: step1 } = gameStateRef.current.state1;
   const { step: step2 } = gameStateRef.current.state2;
-  
+
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -43,5 +42,5 @@ export default function Game({sendAdminMessage}: GameProps) {
 
       <div ref={bottomRef} style={{ height: 0 }} />
     </div>
-  )
+  );
 }
